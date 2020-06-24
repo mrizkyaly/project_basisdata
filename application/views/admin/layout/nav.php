@@ -24,37 +24,43 @@
               </p>
             </a>
           </li>
-          <li class="nav-header">DATA WEBSITE</li>
+          <li class="nav-header">DATA PRODUK</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-user"></i>
+              <i class="nav-icon fa fa-tags"></i>
               <p>
-                User
+                Produk
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?php echo base_url('admin/user') ?>" class="nav-link">
+                <a href="<?php echo base_url('admin/produk') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data User</p>
+                  <p>Data Produk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url('admin/user/tambah') ?>" class="nav-link">
+                <a href="<?php echo base_url('admin/jenis') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah User</p>
+                  <p>Jenis Produk</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-header">SETTING</li>
           <li class="nav-item">
+            <a href="<?php echo base_url('admin/user') ?>" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>User</p>
+            </a>
+          </li>
+<!--           <li class="nav-item">
             <a href="https://adminlte.io/docs/3.0" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>Web Configuration</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

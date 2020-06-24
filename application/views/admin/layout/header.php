@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?php echo base_url() ?>admin/dasbor" class="nav-link">Admin Page</a>
+        <a href="<?php echo base_url() ?>admin/dasbor" class="nav-link">Admin Page | Basis Data</a>
       </li>
     </ul>
 
@@ -15,7 +15,7 @@
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <img src="<?php echo base_url() ?>assets/admin/dist/img/user2-160x160.jpg" class="user-image img-circle elevation-2" alt="User Image">
-          <span class="d-none d-md-inline">aly</span>
+          <span class="d-none d-md-inline"><?php echo $this->session->userdata('USERNAME'); ?></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <!-- User image -->
@@ -23,7 +23,7 @@
             <img src="<?php echo base_url() ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
 
             <p>
-              aly
+              <?php echo $this->session->userdata('USERNAME'); ?>
               <small><?php echo date('d M Y') ?></small>
             </p>
           </li>

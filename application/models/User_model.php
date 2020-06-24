@@ -14,15 +14,52 @@ class User_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('USERS');
-		$this->db->order_by('ID_USER', 'DESC');
+		$this->db->order_by('ID_USER', 'ASC');
 		$query = $this->db->get();
 		return $query->result();
+	}
+
+	// Detail All user untuk edit
+	public function detail($id_user)
+	{
+		$this->db->select('*');
+		$this->db->from('USERS');
+		$this->db->where('ID_USER', $id_user);
+		$this->db->order_by('ID_USER', 'ASC');
+		$query = $this->db->get();
+		return $query->row();
+	}
+
+	// Login User
+	public function login($username,$password)
+	{
+		$this->db->select('*');
+		$this->db->from('USERS');
+		$this->db->where(array( 'USERNAME'	=> $username,
+								'PASSWORD'	=> $password));
+		$this->db->order_by('ID_USER', 'ASC');
+		$query = $this->db->get();
+		return $query->row();
 	}
 
 	// tambah data user
 	public function tambah($data)
 	{
 		$this->db->insert('USERS', $data);
+	}
+
+	// Edit data user
+	public function edit($data)
+	{
+		$this->db->where('ID_USER', $data['ID_USER']);
+		$this->db->update('USERS',$data);
+	}	
+
+	// Delete data user
+	public function delete($data)
+	{
+		$this->db->where('ID_USER', $data['ID_USER']);
+		$this->db->delete('USERS',$data);
 	}	
 
 }

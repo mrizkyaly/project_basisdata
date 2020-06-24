@@ -9,6 +9,8 @@ class Dasbor extends CI_Controller {
 						'isi'		=> 'admin/dasbor/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
+		// proteksi halam admin dengan fungsi cek_lign yang ada di simple login
+		$this->simple_login->cek_login();
 	}
 
 }
