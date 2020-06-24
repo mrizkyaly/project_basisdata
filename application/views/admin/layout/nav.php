@@ -55,12 +55,12 @@
               <p>User</p>
             </a>
           </li>
-<!--           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>Web Configuration</p>
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/pelanggan') ?>" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>Pelanggan</p>
             </a>
-          </li> -->
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
