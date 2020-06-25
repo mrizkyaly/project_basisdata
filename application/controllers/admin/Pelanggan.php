@@ -63,7 +63,7 @@ class Pelanggan extends CI_Controller {
 							'NOMOR'					=>$i->post('NOMOR'),
 							'ALAMAT'				=>$i->post('ALAMAT'),
 							'USERNAME'				=>$i->post('USERNAME'),
-							'PASSWORD'				=>SHA1($i->post('PASSWORD'))
+							'PASSWORD'				=>$i->post('PASSWORD')
 						);
 			$this->pelanggan_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -115,7 +115,7 @@ class Pelanggan extends CI_Controller {
 							'NOMOR'					=>$i->post('NOMOR'),
 							'ALAMAT'				=>$i->post('ALAMAT'),
 							'USERNAME'				=>$i->post('USERNAME'),
-							'PASSWORD'				=>SHA1($i->post('PASSWORD'))
+							'PASSWORD'				=>$i->post('PASSWORD')
 						);
 			$this->pelanggan_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');
