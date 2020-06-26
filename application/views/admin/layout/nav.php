@@ -48,6 +48,15 @@
               </li>
             </ul>
           </li>
+          <li class="nav-header">REPORT</li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/transaksi') ?>" class="nav-link">
+              <i class="nav-icon fas fa-poll-h"></i>
+              <p>
+                Daftar Transaksi
+              </p>
+            </a>
+          </li>
           <li class="nav-header">SETTING</li>
           <li class="nav-item">
             <a href="<?php echo base_url('admin/user') ?>" class="nav-link">

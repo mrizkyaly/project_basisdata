@@ -132,19 +132,21 @@ end;
 /
 
 -->Table Transaksi
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY HH24:MI:SS';
+
 create table transaksi
 (
 	id_transaksi integer not null,
 	id_produk integer,
 	id_pelanggan integer,
 	bayar float(12),
-	tgl_transaksi datetime
+	tgl_transaksi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-alter table produk
+alter table transaksi
 add constraint pk_id_transaksi primary key (id_transaksi)
-add constraint fk_id_produk foreign key (id_produk) references users(id_produk)
-add constraint fk_id_pelanggan foreign key (id_pelanggan) references jenis(id_pelanggan);
+add constraint fk_id_produk foreign key (id_produk) references produk(id_produk)
+add constraint fk_id_pelanggan foreign key (id_pelanggan) references pelanggan(id_pelanggan);
 
 create sequence id_transaksi
 minvalue 1
