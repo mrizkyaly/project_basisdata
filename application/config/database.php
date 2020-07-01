@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-// Untuk database oracle dengan oci8, definisikan terlebih dahulu hostname oracle 
+// Untuk database oracle dengan oci8, mendefinisikan terlebih dahulu hostname oracle 
 $hostname = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
         (CONNECT_DATA =(SID=XE)))';
 

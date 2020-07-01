@@ -7,7 +7,7 @@
 			<th>PEMBELI</th>
 			<th>BAYAR</th>
 			<th>TANGGAL</th>
-			<th>ACTION</th>
+			<!-- <th>ACTION</th> -->
 		</tr>
 	</thead>
 	<tbody>
@@ -21,9 +21,6 @@
 				<td><?php echo $transaksi->NAMA_PELANGGAN ?></td>
 				<td><?php echo $transaksi->BAYAR ?></td>
 				<td><?php echo $transaksi->TGL_TRANSAKSI ?></td>
-				<td>
-					<?php include('delete.php') ?>
-				</td>
 			</tr>
 		<?php $no++; } ?>
 	</tbody>

@@ -8,6 +8,8 @@ class Transaksi extends CI_Controller {
 		parent::__construct();
 		$this->load->model('transaksi_model');
 		$this->load->model('produk_model');
+		// proteksi halam admin dengan fungsi cek_lign yang ada di simple login
+		$this->pelanggan_login->cek_login();
 	}
 
 	public function index()

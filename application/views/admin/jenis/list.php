@@ -26,7 +26,6 @@
 				<td><?php echo $jenis->NAMA_JENIS ?></td>
 				<td>
 					<a href="<?php echo base_url('admin/jenis/edit/'.$jenis->ID_JENIS) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
-					<?php include ('delete.php'); ?>
 				</td>
 			</tr>
 		<?php $no++; } ?>
